@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cancers",
+  "info": {
+    "singularName": "cancer",
+    "pluralName": "cancers",
+    "displayName": "Cancer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "state": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::state.state"
+    },
+    "inc_rate": {
+      "type": "decimal",
+      "required": true
+    },
+    "mort_rate": {
+      "type": "decimal",
+      "required": true
+    },
+    "uv_year": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::uv-year.uv-year",
+      "inversedBy": "cancer"
+    }
+  }
+}

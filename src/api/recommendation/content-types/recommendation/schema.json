@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommendations",
+  "info": {
+    "singularName": "recommendation",
+    "pluralName": "recommendations",
+    "displayName": "Recommendation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "min_uv_level": {
+      "type": "decimal",
+      "required": true
+    },
+    "max_uv_level": {
+      "required": true,
+      "type": "decimal"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "uv_years",
+  "info": {
+    "singularName": "uv-year",
+    "pluralName": "uv-years",
+    "displayName": "UVYear",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "year": {
+      "unique": true,
+      "type": "integer",
+      "required": true
+    },
+    "average_uv": {
+      "type": "decimal",
+      "required": true
+    },
+    "cancer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cancer.cancer",
+      "mappedBy": "uv_year"
+    },
+    "state": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::state.state"
+    }
+  }
+}

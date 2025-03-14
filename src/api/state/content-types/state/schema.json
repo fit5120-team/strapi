@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "states",
+  "info": {
+    "singularName": "state",
+    "pluralName": "states",
+    "displayName": "States",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "main_city": {
+      "type": "string",
+      "required": true
+    },
+    "uv_years": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::uv-year.uv-year"
+    }
+  }
+}
